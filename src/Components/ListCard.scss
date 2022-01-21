@@ -1,0 +1,45 @@
+
+
+.listCard{
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    list-style: none;
+
+
+    &__el{
+        margin: 32px 0 0 0 ;
+    }
+    &__el:first-child{
+        margin: 24px 0 0 0;
+    }
+}
+
+@media(min-width:600px){
+    .listCard{
+        column-gap: 4vw;
+        justify-content: center;
+
+        &__el:nth-child(2){
+            margin: 24px 0 0 0 ;
+        }
+    }   
+    
+
+}
+
+@media(min-width:1000px){
+
+    .listCard{
+        
+        column-gap: 2vw;
+
+        &__el:nth-child(1),
+        &__el:nth-child(2){
+            margin: 32px 0 0 0 ;
+        }
+    }
+    
+}

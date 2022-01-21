@@ -1,0 +1,86 @@
+
+
+[
+    {
+        "id" : 0,
+        "image":"https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "SuperHost":"Super\u00a0host",
+        "headDescription" : "Entire apartment . 2 beds",
+        "startNumb":"4.40",
+        "cardDescription":"Stylist apartment in center of the city"
+
+    },
+    {
+        "id" : 1,
+        "image":"https://images.unsplash.com/photo-1611216212569-d739dbe9ed40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80",
+        "SuperHost":"none",
+        "headDescription" : "Private room",
+        "startNumb":"4.25",
+        "cardDescription":"Cozy, peaceful and private room with..."
+
+    },
+    {
+        "id" : 3,
+        "image":"https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "SuperHost":"none",
+        "headDescription" : "Entire house",
+        "startNumb":"4.96",
+        "cardDescription":"Mordern House in a remote area"
+
+    },
+    {
+        "id" : 4,
+        "image":"https://images.unsplash.com/photo-1640949224872-7cc22bb681a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80",
+        "SuperHost":"Super\u00a0host",
+        "headDescription" : "Entire apartment . 2 beds",
+        "startNumb":"4.85",
+        "cardDescription":"Stylist room in design district "
+
+    },
+    {
+        "id" : 5,
+        "image":"https://images.unsplash.com/photo-1639663742190-1b3dba2eebcf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "SuperHost":"none",
+        "headDescription" : "Private room",
+        "startNumb":"4.54",
+        "cardDescription":"Modern apartment close to nature"
+
+    },
+    {
+        "id" : 5,
+        "image":"https://images.unsplash.com/photo-1638886043487-72d203fa66b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "SuperHost":"none",
+        "headDescription" : "Entire house",
+        "startNumb":"4.64",
+        "cardDescription":"House in a remote area"
+
+    },
+
+    {
+        "id" : 4,
+        "image":"https://images.unsplash.com/photo-1640949224872-7cc22bb681a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80",
+        "SuperHost":"Super\u00a0host",
+        "headDescription" : "Entire apartment . 2 beds",
+        "startNumb":"4.85",
+        "cardDescription":"Stylist room in design district "
+
+    },
+    {
+        "id" : 5,
+        "image":"https://images.unsplash.com/photo-1639663742190-1b3dba2eebcf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "SuperHost":"none",
+        "headDescription" : "Private room",
+        "startNumb":"4.54",
+        "cardDescription":"Modern apartment close to nature"
+
+    },
+    {
+        "id" : 5,
+        "image":"https://images.unsplash.com/photo-1638886043487-72d203fa66b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        "SuperHost":"none",
+        "headDescription" : "Entire house",
+        "startNumb":"4.64",
+        "cardDescription":"House in a remote area"
+
+    }
+]
