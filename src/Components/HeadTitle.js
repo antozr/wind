@@ -18,7 +18,11 @@ function HeadTitle() {
     return (
         <div className='headTitle'>
             <h1 className="headTitle__title">
-                Stays in Finland
+                Stays in&nbsp;
+                <span className="headTitle__title--span">
+                    Finland
+                </span>
+                
             </h1>
             <p className="headTitle__txt">
                 <span className="headTitle__span" onLoad={setNumberCard()}>

@@ -58,6 +58,7 @@ function Header() {
         closeMenu();
         localStorage.setItem('lieu', valeurLieux);
         let card = document.querySelectorAll(".card");
+        let headTitleLoc = document.querySelector('.headTitle__title--span');
         let b =0;
         card.forEach(el => {
             el.classList.remove("card--none");
@@ -76,6 +77,7 @@ function Header() {
         localStorage.setItem('numbCard',b);
         var numberCard = document.querySelector('.headTitle__span');
         numberCard.innerHTML = localStorage.getItem('numbCard') + "+";
+        headTitleLoc.innerHTML=valeurLieux;
         
     }
 
