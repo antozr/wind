@@ -3,6 +3,7 @@
 [
     {
         "id" : 0,
+        "tag" : "helsinki",
         "image":"https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         "SuperHost":"Super\u00a0host",
         "headDescription" : "Entire apartment . 2 beds",
@@ -12,6 +13,7 @@
     },
     {
         "id" : 1,
+        "tag" : "london",
         "image":"https://images.unsplash.com/photo-1611216212569-d739dbe9ed40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80",
         "SuperHost":"none",
         "headDescription" : "Private room",
@@ -21,6 +23,7 @@
     },
     {
         "id" : 3,
+        "tag" : "helsinki",
         "image":"https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         "SuperHost":"none",
         "headDescription" : "Entire house",
@@ -30,6 +33,7 @@
     },
     {
         "id" : 4,
+        "tag" : "helsinki",
         "image":"https://images.unsplash.com/photo-1640949224872-7cc22bb681a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80",
         "SuperHost":"Super\u00a0host",
         "headDescription" : "Entire apartment . 2 beds",
@@ -39,6 +43,7 @@
     },
     {
         "id" : 5,
+        "tag" : "london",
         "image":"https://images.unsplash.com/photo-1639663742190-1b3dba2eebcf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         "SuperHost":"none",
         "headDescription" : "Private room",
@@ -47,7 +52,8 @@
 
     },
     {
-        "id" : 5,
+        "id" : 6,
+        "tag" : "helsinki",
         "image":"https://images.unsplash.com/photo-1638886043487-72d203fa66b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         "SuperHost":"none",
         "headDescription" : "Entire house",
@@ -57,7 +63,8 @@
     },
 
     {
-        "id" : 4,
+        "id" : 7,
+        "tag" : "helsinki",
         "image":"https://images.unsplash.com/photo-1640949224872-7cc22bb681a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80",
         "SuperHost":"Super\u00a0host",
         "headDescription" : "Entire apartment . 2 beds",
@@ -66,7 +73,8 @@
 
     },
     {
-        "id" : 5,
+        "id" : 8,
+        "tag" : "helsinki",
         "image":"https://images.unsplash.com/photo-1639663742190-1b3dba2eebcf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         "SuperHost":"none",
         "headDescription" : "Private room",
@@ -75,7 +83,8 @@
 
     },
     {
-        "id" : 5,
+        "id" : 9,
+        "tag" : "london",
         "image":"https://images.unsplash.com/photo-1638886043487-72d203fa66b6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         "SuperHost":"none",
         "headDescription" : "Entire house",

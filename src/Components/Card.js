@@ -4,14 +4,14 @@ import './Card.scss';
 import appart1 from '../assets/img/appart1.jpg';
 import data from '../data/data.json';
 
-function Card({SuperHost, headDescription, startNumb, cardDescription, image} ) {
+function Card({SuperHost, headDescription, startNumb, cardDescription, image, tag} ) {
 
     function hostNone (){
         let host = document.querySelectorAll('.card__txtHost');
-        console.log('hey');
-        console.log(SuperHost);
+        //console.log('hey');
+        //console.log(SuperHost);
         
-        console.log(host);
+        //console.log(host);
         host.forEach(el => {
             if(el.outerText === "Super host"){
                 console.log("helllo");
@@ -31,7 +31,7 @@ function Card({SuperHost, headDescription, startNumb, cardDescription, image} ) 
     
     console.log(data);
     return (
-        <div className='card'>
+        <div className='card' id={tag}>
             <img src={image} alt="Illustration  of a appartment for location in windNB" className="card__img" />
             <div className="card__head">
                 <p className="card__txtHost"  >

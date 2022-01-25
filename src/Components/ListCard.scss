@@ -11,6 +11,11 @@
 
     &__el{
         margin: 32px 0 0 0 ;
+
+        &--none{
+            display: none;
+            
+        }
     }
     &__el:first-child{
         margin: 24px 0 0 0;

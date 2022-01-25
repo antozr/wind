@@ -2,10 +2,13 @@ import React, { useState } from 'react'
 import './Header.scss';
 import logo from '../assets/img/logo.png';
 import ElementGuest from './ElementGuest';
+import ListLocation from './ListLocation';
 
 function Header() {
 
     const [location, setLocation] = useState(true);
+    const [valeurLieux, setLieu] = useState('');
+
     function closeMenu() {
 
         let btn = document.querySelector('.menu__btn');
@@ -25,62 +28,55 @@ function Header() {
         let box = document.querySelectorAll('.menu__boxSearch');
         setLocation(true);
         console.log(location);
-        setTimeout(function(){
-            verifLocation();
-            console.log(10);
-            console.log(location);
-        },100);
-        verifLocation();
-        if (box[0].classList.contains('menu__boxSearch--actif')) {
-            box[0].classList.remove('menu__boxSearch--actif');
-            box[1].classList.remove('menu__boxSearch--actif');
-        } else {
+        
+        if(box[0].classList.contains('menu__boxSearch--actif')){
             box[1].classList.remove('menu__boxSearch--actif');
             box[0].classList.add('menu__boxSearch--actif');
-        }
-        
-
-    }
-
-
-    function onLabel2() { ///// problem to change the state of the location Obligatory 2 click for change ! Set the problem 
-        setLocation(!location);
-        setLocation(false);
-        console.log(location);
-        setTimeout(function(){
-            setLocation(false);
-            verifLocation();
-            console.log(10);
-            console.log(location);
-        },100);
-        
-        let box = document.querySelectorAll('.menu__boxSearch');
-        if (box[1].classList.contains('menu__boxSearch--actif')) {
-            box[0].classList.remove('menu__boxSearch--actif');
+        }else{
+            box[0].classList.add('menu__boxSearch--actif');
             box[1].classList.remove('menu__boxSearch--actif');
-        } else {
-            box[0].classList.remove('menu__boxSearch--actif');
-            box[1].classList.add('menu__boxSearch--actif');
         }
-        
-    }
+    };
 
-    function verifLocation(){
-        if (location === false) {
-            console.log('this is false');
-            let box = document.querySelectorAll('.menu__list');
-            if (box[1].classList.contains('menu__list--none')) {
-                box[0].classList.add('menu__list--none');
-                box[1].classList.remove('menu__list--none');
+
+    function onLabel2() { 
+        let box = document.querySelectorAll('.menu__boxSearch');
+        setLocation(false);
+        console.log(location); 
+        console.log(valeurLieux);
+        localStorage.setItem('lieu',valeurLieux);
+        if(box[1].classList.contains('menu__boxSearch--actif')){
+            box[1].classList.remove('menu__boxSearch--actif');
+            box[0].classList.add('menu__boxSearch--actif');
+        }else{
+            box[1].classList.add('menu__boxSearch--actif');
+            box[0].classList.remove('menu__boxSearch--actif');
+        } 
+    };
+
+    function btnAction (){
+        closeMenu();
+        localStorage.setItem('lieu', valeurLieux);
+        let card = document.querySelectorAll(".card");
+        let b =0;
+        card.forEach(el => {
+            el.classList.remove("card--none");
+            el.parentElement.classList.remove('listCard__el--none');
+        });
+        card.forEach(el => {
+            console.log(el.id);
+            if(el.id === valeurLieux){
+                b++;
+            }else{
+                el.classList.add("card--none");
+                el.parentElement.classList.add('listCard__el--none');
             }
-    
-        } else {
-            console.log('this is ok');
-            let box = document.querySelectorAll('.menu__list');
-                box[0].classList.remove('menu__list--none');
-                box[1].classList.add('menu__list--none');
-    
-        }
+        });
+        /// add the number of card 
+        localStorage.setItem('numbCard',b);
+        var numberCard = document.querySelector('.headTitle__span');
+        numberCard.innerHTML = localStorage.getItem('numbCard') + "+";
+        
     }
 
 
@@ -112,7 +108,7 @@ function Header() {
                         <label htmlFor='lieux' className="menu__txtInfo" >
                             Location
                         </label>
-                        <input type="text" name='lieux' id='lieux' placeholder='Helsinki, Finland' className="menu__txtInfo menu__txtInfo--search" />
+                        <input type="text" name='lieux' id='lieux' placeholder='Helsinki, Finland' className="menu__txtInfo menu__txtInfo--search" value={valeurLieux} onChange={(e) => setLieu(e.target.value)} />
                     </div>
                     <div className="menu__boxSearch" onClick={onLabel2}>
                         <label htmlFor="guest" className="menu__txtInfo" >
@@ -121,34 +117,9 @@ function Header() {
                         <input type="text" name='guest' id='guest' placeholder='Add guests' className="menu__txtInfo menu__txtInfo--light " />
                     </div>
                 </div>
-                <ul className="menu__list">
-                    <li className="menu__el">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#4F4F4F"><path d="M0 0h24v24H0z" fill="none" /><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" /></svg>
-                        <p className="menu__txt menu__txt--lieu">
-                            Helsinki, Finland
-                        </p>
-                    </li>
-                    <li className="menu__el">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#4F4F4F"><path d="M0 0h24v24H0z" fill="none" /><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" /></svg>
-                        <p className="menu__txt menu__txt--lieu">
-                            Turku, Finland
-                        </p>
-                    </li>
-                    <li className="menu__el">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#4F4F4F"><path d="M0 0h24v24H0z" fill="none" /><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" /></svg>
-                        <p className="menu__txt menu__txt--lieu">
-                            Oulu, Finland
-                        </p>
-                    </li>
-                    <li className="menu__el">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#4F4F4F"><path d="M0 0h24v24H0z" fill="none" /><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" /></svg>
-                        <p className="menu__txt menu__txt--lieu">
-                            Vaasa, Finland
-                        </p>
-                    </li>
-                </ul>
-                <ElementGuest />
-                <button type="submit" className='menu__btnSearch' onClick={closeMenu}>
+                {location ? <ListLocation/> : <ElementGuest />}
+                
+                <button type="submit" className='menu__btnSearch' onClick={btnAction}>
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0V0z" fill="none" /><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" /></svg>
                     Search
                 </button>

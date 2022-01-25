@@ -25,6 +25,10 @@
     flex-direction: column;
     transition: 0.3s;
     cursor: pointer;
+    &--none{
+        display: none;
+        background-color: red;
+    }
     &:hover{
         background-color: #4F4F4F10;
         transition: 0.3s;

@@ -10,6 +10,7 @@ function App() {
     <div className="app">
       <Header />
       <HeadTitle />
+      
       <ListCard />
       <Foot />
     </div>
